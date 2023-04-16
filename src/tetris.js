@@ -838,7 +838,7 @@ function Tetris()
 			this.type = this.nextType;
             this.color = this.nextColor;
 			this.nextType = random(this.puzzles.length);
-            this.nextColor = Math.floor((Math.random() * 10) % 2);
+            this.nextColor = Math.round(Math.random());
 			this.position = 0;
 			this.speed = 80 + (700 / this.tetris.stats.getLevel());
 			this.running = false;
@@ -854,7 +854,7 @@ function Tetris()
 		};
 
 		this.nextType = random(this.puzzles.length);
-        this.nextColor = Math.floor((Math.random() * 10) % 2);
+        this.nextColor = Math.round(Math.random());
 		this.reset();
 
 		/**
