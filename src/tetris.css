@@ -30,7 +30,7 @@ body, table, input {
 
 #tetris-area {
 	/* 168,308 +2px	borders	*/
-	background:	#fff;
+	background:	#E8E8E8;
 	position: absolute;
 	width: 167px;
 	height:	307px;
@@ -39,7 +39,7 @@ body, table, input {
 	overflow: hidden;
 }
 
-.grid1,	.grid2,	.grid3,	.grid4,	.grid5,	.grid6 { z-index: 10; position:	absolute; top: 0px;	width: 13px; height: 307px;	background:	#f4efe9; }
+.grid1,	.grid2,	.grid3,	.grid4,	.grid5,	.grid6 { z-index: 10; position:	absolute; top: 0px;	width: 13px; height: 307px;	background:	#f4efe9; display: none; }
 .grid1 { left: 14px; }
 .grid2 { left: 42px; }
 .grid3 { left: 70px; }
@@ -61,7 +61,6 @@ body, table, input {
 	position: absolute;
 	width: 13px;
 	height:	13px;
-	border:	0.5px solid #ffffff;
 	/* with	margin 0.5px there were	problems with offsetLeft and offsetTop */
 }
 
@@ -167,13 +166,13 @@ body, table, input {
 	|
 	---
 */
-#tetris	.block1	{ background: #32a4fa; }
+#tetris	.block1	{ background: #14ebee; }
 
 /*
 	  |
 	---
 */
-#tetris	.block0	{ background: #38C44F; }
+#tetris	.block0	{ background: #EC3838; }
 
 
 

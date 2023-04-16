@@ -767,6 +767,8 @@ function Tetris()
 		this.forceMoveDownID = null;
 
 		this.type = null; // 0..6
+        this.color = null;
+        this.nextColor = null;
 		this.nextType = null; // next puzzle
 		this.position = null; // 0..3
 		this.speed = null;
@@ -834,7 +836,9 @@ function Tetris()
 				clearTimeout(this.forceMoveDownID);
 			}
 			this.type = this.nextType;
+            this.color = this.nextColor;
 			this.nextType = random(this.puzzles.length);
+            this.nextColor = Math.floor((Math.random() * 10) % 2);
 			this.position = 0;
 			this.speed = 80 + (700 / this.tetris.stats.getLevel());
 			this.running = false;
@@ -850,6 +854,7 @@ function Tetris()
 		};
 
 		this.nextType = random(this.puzzles.length);
+        this.nextColor = Math.floor((Math.random() * 10) % 2);
 		this.reset();
 
 		/**
@@ -955,7 +960,7 @@ function Tetris()
 					if (puzzle[y][x]) {
 						lineFound = true;
 						var el = document.createElement("div");
-						el.className = "block" + this.type;
+						el.className = "block" + this.color;
 						el.style.left = (areaStartX + x) * this.area.unit + "px";
 						el.style.top = (areaStartY - lines) * this.area.unit + "px";
 						this.area.el.appendChild(el);
@@ -978,7 +983,7 @@ function Tetris()
 				for (var x = 0; x < nextPuzzle[y].length; x++) {
 					if (nextPuzzle[y][x]) {
 						var el = document.createElement("div");
-						el.className = "block" + this.nextType;
+						el.className = "block" + this.color;
 						el.style.left = (x * this.area.unit) + "px";
 						el.style.top = (y * this.area.unit) + "px";
 						document.getElementById("tetris-nextpuzzle").appendChild(el);
