@@ -8,6 +8,10 @@ Not every type of anaglyph glasses can be used for this game. I've picked colors
 
 ![Anaglyph glasses](https://raw.githubusercontent.com/ITachiLab/stereoptris/master/images/anaglyph-glasses.jpg)
 
+And here you can see how it looks with anaglyph glasses:
+
+![Demo with glasses](https://raw.githubusercontent.com/ITachiLab/stereoptris/master/images/demo.gif)
+
 ## Download & Play
 
 A browser version of the game is available for download. To run it, extract the ZIP file, and open `tetris.html` in your browser. You can download it from the [Releases page](../../releases).
